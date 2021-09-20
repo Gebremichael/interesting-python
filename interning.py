@@ -5,13 +5,13 @@ a = "h"+"i"
 b = "hi"
 
 #but with interning, python knowing the same immutiable string existing during compile 
-# it doesnt create a new address, it just point to existing on
-print(a is b)
+# it doesnt create a new address, it just point to existing one
+print(a is b) # true
 #same as
-print(id(a)==id(b))
+print(id(a)==id(b)) # true
 
 # not that join doesnt work since it doesnt know during complile
 c = "".join(["h","i"])
-print(b is c)
+print(b is c) # false
 
 # NOTE this is because it doesnt know that c == "hi" at compile time
